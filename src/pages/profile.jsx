@@ -337,7 +337,7 @@ const profiles = [
     name: "Melina Giraudeau",
     image: "/img/mgir.jpg",
     position: "Natation",
-    location: "Non décidé",
+    location: "Colorodo Mesa University",
   },
   {
     name: "Cesar Robles",
@@ -356,6 +356,18 @@ const profiles = [
     image: "/img/apas.jpg",
     position: "Volley-ball",
     location: "Mercer University",
+  },
+  {
+    name: "Teo Puig",
+    image: "",
+    position: "Volley-ball",
+    location: "Delta State University",
+  },
+  {
+    name: "Isabella Videment",
+    image: "",
+    position: "Volley-ball",
+    location: "University of Miami",
   },
 ];
 
