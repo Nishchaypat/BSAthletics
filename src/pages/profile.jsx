@@ -329,7 +329,7 @@ const profiles = [
   {
     name: "Matheo Loillier",
     image: "/img/mloi.jpg",
-    position: "Water Polo",
+    position: "Natation",
     location: "Non décidé",
   },
   {
@@ -358,15 +358,27 @@ const profiles = [
   },
   {
     name: "Teo Puig",
-    image: "",
+    image: "/img/tpuig.jpg",
     position: "Volley-ball",
     location: "Delta State University",
   },
   {
     name: "Isabella Videment",
-    image: "",
-    position: "Volley-ball",
+    image: "/img/ividement.jpg",
+    position: "Natation",
     location: "University of Miami",
+  },
+  {
+    name: "Inès Mahmoudi",
+    image: "/img/imahmoudi.jpg",
+    position: "Natation",
+    location: "Ohio State University",
+  },
+  {
+    name: "Vanina Loriedo",
+    image: "/img/vloriedo.jpg",
+    position: "Volley-ball",
+    location: "University of Montevallo",
   },
 ];
 
@@ -448,7 +460,6 @@ export function Profile() {
           </div>
         </div>
       </div>
-
       {/* Athletes Section with Modern Cards */}
       <section className="relative bg-white py-16">
         <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
