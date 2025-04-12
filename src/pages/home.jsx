@@ -261,7 +261,6 @@
 
 // export default Home;
 
-
 import React, { useState, useRef } from "react";
 import {
   Card,
@@ -304,9 +303,29 @@ export function Home() {
 
   return (
     <>
+      {/* Hero Section with gradient background instead of image */}
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/bg-home-test1.jpeg')] bg-cover bg-center opacity-50" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500" />
+        <div className="absolute top-0 h-full w-full">
+          {/* Abstract pattern overlay */}
+          <div className="h-full w-full opacity-10">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div 
+                key={i}
+                className="absolute rounded-full"
+                style={{
+                  width: `${Math.random() * 300 + 50}px`,
+                  height: `${Math.random() * 300 + 50}px`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  background: 'white',
+                  opacity: Math.random() * 0.5,
+                  transform: `scale(${Math.random() * 1 + 0.5})`,
+                }}
+              />
+            ))}
+          </div>
+        </div>
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">

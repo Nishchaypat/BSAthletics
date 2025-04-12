@@ -271,13 +271,36 @@ import { FaGraduationCap, FaBook, FaChalkboardTeacher, FaBriefcase, FaGlobe } fr
 export function WhyUsa() {
   return (
     <>
-      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32 bg-gradient-to-r from-[#ffffff] to-[#ffffff]">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/02-Entry-Hall.jpg')] bg-cover bg-center opacity-70" />
-        <div className="relative z-10 container mx-auto text-center text-black">
-          <Typography variant="h1" className="mb-8 font-bold text-4xl md:text-5xl lg:text-6xl">
-            Excellence Académique dans les Universités Américaines
-          </Typography>
-        </div>
+      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
+              <div className="absolute top-0 h-full w-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500" />
+              <div className="absolute top-0 h-full w-full">
+                <div className="h-full w-full opacity-10">
+                  {Array.from({ length: 20 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute rounded-full"
+                      style={{
+                        width: `${Math.random() * 300 + 50}px`,
+                        height: `${Math.random() * 300 + 50}px`,
+                        left: `${Math.random() * 100}%`,
+                        top: `${Math.random() * 100}%`,
+                        background: 'white',
+                        opacity: Math.random() * 0.5,
+                        transform: `scale(${Math.random() * 1 + 0.5})`,
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="max-w-8xl container relative mx-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+                    <Typography variant="h1" color="white" className="mb-8 font-blue-gray">
+                    Excellence Académique dans les Universités Américaines
+                    </Typography>
+                  </div>
+              </div>
+          </div>
       </div>
 
       <section className="bg-gray-100 text-gray-900 px-6 py-16">

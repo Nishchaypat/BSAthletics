@@ -248,11 +248,10 @@
 
 // export default Profile;
 
-
 import React, { useState } from "react";
-import { Typography, Card, CardHeader, CardBody } from "@material-tailwind/react";
+import { Typography, Card, CardHeader, CardBody, Button } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout";
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaTrophy, FaMapMarkerAlt } from 'react-icons/fa';
 
 const profiles = [
   {
@@ -408,11 +407,49 @@ export function Profile() {
     setVisibleProfiles(showMore ? 6 : profiles.length);
   };
 
+  // Function to get a placeholder for missing images
+  const getPlaceholderImage = (name) => {
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0D8ABC&color=fff&size=150`;
+  };
+
   return (
     <>
-      <section className="relative block h-[50vh]">
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-105" />
-      </section>
+      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
+        <div className="absolute top-0 h-full w-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500" />
+        <div className="absolute top-0 h-full w-full">
+          <div className="h-full w-full opacity-10">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute rounded-full"
+                style={{
+                  width: `${Math.random() * 300 + 50}px`,
+                  height: `${Math.random() * 300 + 50}px`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  background: 'white',
+                  opacity: Math.random() * 0.5,
+                  transform: `scale(${Math.random() * 1 + 0.5})`,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="max-w-8xl container relative mx-auto">
+          <div className="flex flex-wrap items-center">
+            <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+              <Typography variant="h1" color="white" className="mb-8 font-blue-gray">
+              Nos Athlètes Étoiles
+              </Typography>
+              <Typography variant="h4" color="black" className="mb-8 font-blue-gray">
+              Découvrez les parcours exceptionnels de nos athlètes qui excellent dans les universités américaines
+              </Typography>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Athletes Section with Modern Cards */}
       <section className="relative bg-white py-16">
         <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
           <div className="container mx-auto">
@@ -422,43 +459,64 @@ export function Profile() {
             <Typography variant="paragraph" color="blue-gray" className="mb-12 text-center">
               Nous sommes fiers de vous présenter certains des athlètes remarquables que nous avons signés jusqu'à présent. Chacun de ces individus a obtenu un succès remarquable, décrochant des bourses dans des universités prestigieuses. Leur dévouement, talent et travail acharné ont pavé la voie pour leur avenir brillant.
             </Typography>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            
+            {/* Modern card grid layout */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {profiles.slice(0, visibleProfiles).map((profile, index) => (
-                <Card key={index} className="shadow-lg border shadow-gray-500/10 rounded-lg mx-auto bg-black">
-                  <CardHeader floated={false} className="flex flex-col items-center bg-black">
-                    <div className="w-40 h-40 mb-4">
-                      <img
-                        src={profile.image}
-                        alt="Photo de profil"
-                        className="object-cover rounded-full w-full h-full object-position-center"
-                        style={{ objectPosition: 'top' }}
-                      />
+                <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0">
+                  <div className="relative h-64 overflow-hidden">
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    
+                    {/* Profile image or placeholder */}
+                    <img
+                      src={profile.image || getPlaceholderImage(profile.name)}
+                      alt={profile.name}
+                      className=" w-full h-full"
+                    />
+                    
+                    {/* Sport icon */}
+                    <div className="absolute top-4 right-4 bg-white p-2 rounded-full z-20">
+                      {profile.position === "Natation" && <FaSwimmer className="text-blue-500 text-xl" />}
+                      {profile.position === "Football" && <FaFutbol className="text-blue-500 text-xl" />}
+                      {profile.position === "Volley-ball" && <FaVolleyballBall className="text-blue-500 text-xl" />}
+                      {profile.position === "Water Polo" && <FaWater className="text-blue-500 text-xl" />}
                     </div>
-                  </CardHeader>
-                  <CardBody className="text-center">
-                    <Typography variant="h5" color="white" className="mb-2">
-                      {profile.name}
-                    </Typography>
-                    <Typography variant="paragraph" color="white" className="font-normal">
-                      {profile.position}
-                    </Typography>
-                    <Typography variant="paragraph" color="white" className="mt-2 font-medium">
-                      {profile.location}
-                    </Typography>
-                    <Typography variant="paragraph" color="white" className="mt-1 font-light">
-                      {profile.bio}
-                    </Typography>
+                    
+                    {/* Name overlay */}
+                    <div className="absolute bottom-0 left-0 w-full p-4 z-20">
+                      <Typography variant="h5" className="text-white font-bold">
+                        {profile.name}
+                      </Typography>
+                    </div>
+                  </div>
+                  
+                  <CardBody className="p-4">
+                    <div className="flex items-center mb-3">
+                      <FaTrophy className="text-amber-500 mr-2" />
+                      <Typography variant="h6" color="blue-gray">
+                        {profile.position}
+                      </Typography>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <FaMapMarkerAlt className="text-red-500 mr-2" />
+                      <Typography variant="paragraph" color="blue-gray">
+                        {profile.location}
+                      </Typography>
+                    </div>
                   </CardBody>
                 </Card>
               ))}
             </div>
-            <div className="flex justify-center mt-8">
-              <button
+            
+            <div className="flex justify-center mt-10">
+              <Button 
                 onClick={toggleShowMore}
-                className="bg-black text-white px-4 py-2 rounded-lg"
+                className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg shadow-md transition-all duration-300"
               >
-                {showMore ? 'Afficher moins' : 'Voir plus'}
-              </button>
+                {showMore ? 'Afficher moins' : 'Voir plus d\'athlètes'}
+              </Button>
             </div>
           </div>
         </div>
@@ -471,8 +529,10 @@ export function Profile() {
           </Typography>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {sports.map((sport, index) => (
-              <div key={index} className="flex flex-col items-center">
-                {sport.icon}
+              <div key={index} className="flex flex-col items-center bg-gray-50 p-6 rounded-xl hover:shadow-md transition-all duration-300">
+                <div className="text-blue-500">
+                  {sport.icon}
+                </div>
                 <Typography variant="h6" color="blue-gray" className="mt-4">
                   {sport.name}
                 </Typography>
