@@ -260,7 +260,6 @@
 // }
 
 // export default Home;
-
 import React, { useState, useRef } from "react";
 import {
   Card,
@@ -431,69 +430,93 @@ export function Home() {
       <br />
       <br />
       <br />
-      <section className="text-center -mt-32 bg-white px-4 pb-20 pt-4 relative py-24">
-      <div className="container mx-auto max-w-7xl flex flex-col items-center">
+      <section className="text-center bg-white px-4 pb-20 pt-4 relative py-24">
+        <div className="container mx-auto max-w-7xl flex flex-col items-center">
           <PageTitle section="Notre histoire">
-          <div className="flex flex-col items-center">
-          <div className="w-40 h-40 mb-4">
-            <img alt="Card Image" src="/img/simon.jpeg" className="object-cover rounded-full w-full h-full" />
-          </div>
-            <div className="text-center">
-              <h1 className="text-2xl font-bold text-blue-gray-900">
-                Simon Botton
-              </h1>
-              <h2 className="text-xl font-medium text-blue-gray-600 mt-2">
-                Fondateur
-              </h2>
+            <div className="flex flex-col items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+                {/* Simon's Profile */}
+                <div className="flex flex-col items-center">
+                  <div className="w-40 h-40 mb-4">
+                    <img alt="Simon Botton" src="/img/simon.jpeg" className="object-cover rounded-full w-full h-full" />
+                  </div>
+                  <div className="text-center">
+                    <h1 className="text-2xl font-bold text-blue-gray-900">
+                      Simon Botton
+                    </h1>
+                    <h2 className="text-xl font-medium text-blue-gray-600 mt-2">
+                      Fondateur
+                    </h2>
+                  </div>
+                  <p className="text-lg text-blue-gray-500 mt-4">
+                    Le parcours de Simon a commencé lorsqu'il a déménagé de la France aux États-Unis à 18 ans pour nager et étudier. 
+                    À travers ses expériences dans divers collèges américains, Simon a réalisé que les étudiants-athlètes étrangers 
+                    rencontrent souvent des difficultés importantes pour accéder aux opportunités disponibles dans l'enseignement supérieur américain.
+                    Dans de nombreux pays, comme la France, poursuivre des études supérieures tout en pratiquant un sport de haut niveau peut être complexe. 
+                    Cela a inspiré Simon à créer une communauté de soutien pour ces athlètes — une "grande famille" qui va au-delà de la simple recherche 
+                    d'une école ou d'une bourse.
+                  </p>
+                </div>
+                
+                {/* Clément's Profile */}
+                <div className="flex flex-col items-center">
+                  <div className="w-40 h-40 mb-4">
+                    <img alt="Clément Secchi" src="/img/csecchi.jpg" className="object-cover rounded-full w-full h-full" />
+                  </div>
+                  <div className="text-center">
+                    <h1 className="text-2xl font-bold text-blue-gray-900">
+                      Clément Secchi
+                    </h1>
+                    <h2 className="text-xl font-medium text-blue-gray-600 mt-2">
+                      Co-fondateur
+                    </h2>
+                  </div>
+                  <p className="text-lg text-blue-gray-500 mt-4">
+                    Clément Secchi rejoint BSathletics en apportant une richesse de connaissances, de conseils avisés, et un réseau précieux pour les athlètes 
+                    en quête de recrutement dans le système universitaire américain. Diplômé de l'Université McGill et titulaire d'un master de l'Université du Missouri, 
+                    Clément a non seulement brillé sur le plan académique mais s'est également distingué comme l'un des nageurs les plus accomplis de sa génération.
+                    <br /><br />
+                    En tant que champion individuel de la conférence SEC, la plus compétitive et prestigieuse en natation aux États-Unis, 
+                    et médaillé aux Championnats d'Europe et aux Jeux Olympiques de Paris 2024, Clément s'engage à partager son expertise pour guider les jeunes talents 
+                    à chaque étape de leur parcours.
+                  </p>
+                </div>
+              </div>
             </div>
-            <br />
-            <p className="text-2xl text-blue-gray-500">
-              Le parcours de Simon a commencé lorsqu'il a déménagé de la France aux États-Unis à 18 ans pour nager et étudier. À travers ses expériences dans divers collèges américains,
-              Simon a réalisé que les étudiants-athlètes étrangers rencontrent souvent des difficultés importantes pour accéder aux opportunités disponibles dans l'enseignement supérieur américain.
-              Dans de nombreux pays, comme la France, poursuivre des études supérieures tout en pratiquant un sport de haut niveau peut être complexe. Cela a inspiré Simon à créer une communauté de soutien
-              pour ces athlètes — une "grande famille" qui va au-delà de la simple recherche d'une école ou d'une bourse.
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            </p>
-            </div>
-
           </PageTitle>
-
+          <br/><br/><br/><br/>
           <PageTitle section="Comment réaliser votre rêve">
-          <div className="text-center">
+            <div className="text-center">
               <h1 className="text-2xl font-bold text-blue-gray-900">
                 Prochaines étapes
               </h1>
             </div>
-          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-            {contactData.map(({ title, icon, description }) => (
-              <Card
-                key={title}
-                color="transparent"
-                shadow={false}
-                className="text-center text-blue-gray-900"
-              >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-blue-gray-900 shadow-lg shadow-gray-500/20">
-                  {React.createElement(icon, {
-                    className: "w-5 h-5 text-white",
-                  })}
-                </div>
-                <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="mb-2 font-bold"
+            <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+              {contactData.map(({ title, icon, description }) => (
+                <Card
+                  key={title}
+                  color="transparent"
+                  shadow={false}
+                  className="text-center text-blue-gray-900"
                 >
-                  {title}
-                </Typography>
-                <Typography className="font-normal text-blue-gray-500">
-                  {description}
-                </Typography>
-              </Card>
-            ))}
-          </div>
+                  <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-blue-gray-900 shadow-lg shadow-gray-500/20">
+                    {React.createElement(icon, {
+                      className: "w-5 h-5 text-white",
+                    })}
+                  </div>
+                  <Typography
+                    variant="h5"
+                    color="blue-gray"
+                    className="mb-2 font-bold"
+                  >
+                    {title}
+                  </Typography>
+                  <Typography className="font-normal text-blue-gray-500">
+                    {description}
+                  </Typography>
+                </Card>
+              ))}
+            </div>
           </PageTitle>
 
           <div className="w-full max-w-3xl mt-4">
