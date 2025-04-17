@@ -534,31 +534,30 @@ export function Home() {
                 <CardBody className="flex flex-col gap-4">
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <Input variant="outlined" label="Nom complet" name="from_name" size="lg" required />
-                    <Input variant="outlined" label="Email" name="email_id" size="lg" required />
+                    <Input variant="outlined" label="Email" name="user_email" size="lg" required />
                   </div>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Input variant="outlined" label="Numéro de téléphone" name="phone" size="lg" required />
-                    <Input variant="outlined" label="Pays" name="country" size="lg" required />
+                    <Input variant="outlined" label="Numéro de téléphone" name="user_phone" size="lg" required />
+                    <Input variant="outlined" label="Pays" name="user_country" size="lg" required />
                   </div>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Input variant="outlined" label="Sport" name="sport" size="lg" required />
-                    <Input variant="outlined" label="Taille" name="height" size="lg" required />
-                    <Input variant="outlined" label="Poids" name="weight" size="lg" required />
+                    <Input variant="outlined" label="Sport" name="user_sport" size="lg" required />
                   </div>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Input variant="outlined" label="Âge" name="age" size="lg" required />
-                    <Input variant="outlined" label="GPA" name="gpa" size="lg" required />
-                    <Input variant="outlined" label="Lycée" name="high_school" size="lg" required />
+                    <Input variant="outlined" label="Âge" name="user_age" size="lg" required />
+                    <Input variant="outlined" label="GPA" name="user_gpa" size="lg" required />
+                    <Input variant="outlined" label="Lycée" name="user_high_school" size="lg" required />
                   </div>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Input variant="outlined" label="Classement national en sport" name="national_ranking" size="lg" required />
-                    <Input variant="outlined" label="Meilleurs temps ou performances" name="best_times_performance" size="lg" required />
+                    <Input variant="outlined" label="Classement national en sport" name="user_national_ranking" size="lg" required />
+                    <Input variant="outlined" label="Meilleurs temps ou performances" name="user_best_performance" size="lg" required />
                   </div>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Input variant="outlined" label="Objectifs académiques" name="academic_goals" size="lg" required />
-                    <Input variant="outlined" label="Objectifs sportifs" name="athletic_goals" size="lg" required />
+                    <Input variant="outlined" label="Objectifs académiques" name="user_academic_goals" size="lg" required />
+                    <Input variant="outlined" label="Objectifs sportifs" name="user_athletic_goals" size="lg" required />
+                    <Input type="text" name="user_budget" variant="standard" size="lg" label="Budget" className="flex-1" required/>
                   </div>
-                  <Textarea variant="outlined" label="Budget" name="budget" size="lg" required />
+                  <Textarea name="message" variant="standard" size="lg" label="Message" rows={8} required/>
                   <Checkbox
                     label={
                       (
