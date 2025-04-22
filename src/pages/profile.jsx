@@ -380,6 +380,18 @@ const profiles = [
     position: "Volley-ball",
     location: "University of Montevallo",
   },
+  {
+    name: "Justine Delmas",
+    image: "/img/jdelmas.jpg",
+    position: "Natation",
+    location: "University of Wisconsin Madison",
+  },
+  {
+    name: "Lucie Delmas",
+    image: "/img/ldelmas.jpg",
+    position: "Natation",
+    location: "University of Wisconsin Madison",
+  }
 ];
 
 import { FaRunning, FaBasketballBall, FaGolfBall, FaDumbbell, FaSwimmer, FaVolleyballBall, FaWater, FaFutbol } from 'react-icons/fa';
