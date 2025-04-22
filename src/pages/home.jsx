@@ -331,7 +331,7 @@ export function Home() {
               <Typography
                 variant="h2"
                 color="white"
-                className="mb-8 font-blue-gray"
+                className="mb-8 text-6xl font-blue-gray"
               >
                 Votre rêve américain commence ici.
               </Typography>
