@@ -277,6 +277,7 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import emailjs from 'emailjs-com';
+import BSLogoAnimation from './BSLogoAnimation';
 
 export function Home() {
   const [showMore, setShowMore] = useState(false);
@@ -303,47 +304,55 @@ export function Home() {
   return (
     <>
       {/* Hero Section with gradient background instead of image */}
-      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500" />
-        <div className="absolute top-0 h-full w-full">
-          {/* Abstract pattern overlay */}
-          <div className="h-full w-full opacity-10">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <div 
-                key={i}
-                className="absolute rounded-full"
-                style={{
-                  width: `${Math.random() * 300 + 50}px`,
-                  height: `${Math.random() * 300 + 50}px`,
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  background: 'white',
-                  opacity: Math.random() * 0.5,
-                  transform: `scale(${Math.random() * 1 + 0.5})`,
-                }}
-              />
-            ))}
-          </div>
+      <div className="relative flex h-screen items-center justify-center pt-16 pb-32 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500">
+      {/* Abstract pattern overlay */}
+      <div className="absolute top-0 h-full w-full">
+        <div className="h-full w-full opacity-10">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full"
+              style={{
+                width: `${Math.random() * 300 + 50}px`,
+                height: `${Math.random() * 300 + 50}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                background: 'white',
+                opacity: Math.random() * 0.5,
+                transform: `scale(${Math.random() * 1 + 0.5})`,
+              }}
+            />
+          ))}
         </div>
-        <div className="max-w-8xl container relative mx-auto">
-          <div className="flex flex-wrap items-center">
-            <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <Typography
-                variant="h2"
-                color="white"
-                className="mb-8 text-6xl font-blue-gray"
-              >
-                Votre rêve américain commence ici.
-              </Typography>
-              <Typography variant="lead" color="white" className="opacity-100">
-                Nous croyons au pouvoir du sport et de l'éducation pour transformer des vies.
-                <br /><br />
-                Nous nous engageons à guider et à soutenir les étudiants-athlètes tout au long de leur parcours universitaire, de leur recrutement initial jusqu'à l'obtention de leur diplôme et au-delà.
-              </Typography>
+      </div>
+      
+      <div className="max-w-8xl container mx-auto px-4">
+        <div className="flex flex-wrap items-center">
+          {/* Text Content - Left Side */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+            <Typography
+              variant="h2"
+              color="white"
+              className="mb-8 text-6xl font-blue-gray"
+            >
+              Votre rêve américain commence ici.
+            </Typography>
+            <Typography variant="lead" color="white" className="opacity-100">
+              Nous croyons au pouvoir du sport et de l'éducation pour transformer des vies.
+              <br /><br />
+              Nous nous engageons à guider et à soutenir les étudiants-athlètes tout au long de leur parcours universitaire, de leur recrutement initial jusqu'à l'obtention de leur diplôme et au-delà.
+            </Typography>
+          </div>
+          
+          {/* BS Logo Animation - Right Side */}
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="relative w-full max-w-md aspect-square">
+              <BSLogoAnimation />
             </div>
           </div>
         </div>
       </div>
+    </div>
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
