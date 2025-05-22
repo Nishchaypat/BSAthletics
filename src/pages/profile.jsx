@@ -321,12 +321,6 @@ const profiles = [
     location: "Colorodo Mesa University",
   },
   {
-    name: "Cesar Robles",
-    image: "/img/crobs.jpg",
-    position: "Natation",
-    location: "Aquina College",
-  },
-  {
     name: "Isaac Panzer",
     image: "/img/ipan.jpg",
     position: "Natation",
