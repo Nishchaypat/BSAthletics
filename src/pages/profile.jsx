@@ -256,9 +256,9 @@ import { FaChevronLeft, FaChevronRight, FaTrophy, FaMapMarkerAlt } from 'react-i
 const profiles = [
   {
     name: "Benjamin Chateigner",
-    image: "/img/bchat.jpg",
+    image: "/img/bchateigner.jpg",
     position: "Natation",
-    location: "Auburn University",
+    location: "Southern Methodist University",
   },
   {
     name: "Parker Bell",
@@ -310,7 +310,7 @@ const profiles = [
   },
   {
     name: "Lillie Freulon",
-    image: "/img/lfre.jpg",
+    image: "/img/lfreulon.jpg",
     position: "Natation",
     location: "Missouri State University",
   },
@@ -391,6 +391,24 @@ const profiles = [
     image: "/img/ldelmas.jpg",
     position: "Natation",
     location: "University of Wisconsin Madison",
+  },
+  {
+    name: "Anais Montibert",
+    image: "/img/amontibert.jpg",
+    position: "Natation",
+    location: "University of Denver",
+  },
+  {
+    name: "Thomas Costantini",
+    image: "/img/tcostantini.jpg",
+    position: "Natation",
+    location: "Iowa Lakes Community College",
+  },
+  {
+    name: "Simon Meubry",
+    image: "/img/smeubry.jpg",
+    position: "Natation",
+    location: "Iowa Lakes Community College",
   }
 ];
 
