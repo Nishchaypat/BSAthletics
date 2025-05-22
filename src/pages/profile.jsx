@@ -261,12 +261,6 @@ const profiles = [
     location: "Southern Methodist University",
   },
   {
-    name: "Parker Bell",
-    image: "/img/pbell.jpg",
-    position: "Natation",
-    location: "University of Montevallo",
-  },
-  {
     name: "Baptiste Oliveri",
     image: "/img/bolie.jpg",
     position: "Natation",
