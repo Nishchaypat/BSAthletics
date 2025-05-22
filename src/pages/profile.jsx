@@ -261,12 +261,6 @@ const profiles = [
     location: "Southern Methodist University",
   },
   {
-    name: "Paolo Morliere",
-    image: "/img/pmor.jpg",
-    position: "Natation",
-    location: "Saint Francis University",
-  },
-  {
     name: "Fanny Courbot",
     image: "/img/fcou.jpg",
     position: "Natation",
