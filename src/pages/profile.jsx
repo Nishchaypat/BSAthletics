@@ -261,12 +261,6 @@ const profiles = [
     location: "Southern Methodist University",
   },
   {
-    name: "Baptiste Oliveri",
-    image: "/img/bolie.jpg",
-    position: "Natation",
-    location: "Saint Francis University",
-  },
-  {
     name: "Paolo Morliere",
     image: "/img/pmor.jpg",
     position: "Natation",
