@@ -269,13 +269,13 @@ const profiles = [
   {
     name: "Baptiste Oliveri",
     image: "/img/bolie.jpg",
-    position: "Water Polo",
+    position: "Natation",
     location: "Saint Francis University",
   },
   {
     name: "Paolo Morliere",
     image: "/img/pmor.jpg",
-    position: "Water Polo",
+    position: "Natation",
     location: "Saint Francis University",
   },
   {
@@ -299,13 +299,13 @@ const profiles = [
   {
     name: "Amaury Jarry",
     image: "/img/ajarr.jpg",
-    position: "Football",
+    position: "Natation",
     location: "John Brown University",
   },
   {
     name: "Armand Legoff",
     image: "/img/aleg.jpg",
-    position: "Natation",
+    position: "Water Polo",
     location: "Saddleback College",
   },
   {
@@ -317,20 +317,20 @@ const profiles = [
   {
     name: "Janek Barczyk",
     image: "/img/jbar.jpg",
-    position: "Volley-ball",
+    position: "Natation",
     location: "Florida Southern College",
   },
   {
     name: "Mateo Wallet",
     image: "/img/mwall.jpg",
-    position: "Water Polo",
+    position: "Natation",
     location: "Barton Community College",
   },
   {
     name: "Matheo Loillier",
     image: "/img/mloi.jpg",
-    position: "Natation",
-    location: "Non décidé",
+    position: "Water Polo",
+    location: "Witthier College",
   },
   {
     name: "Melina Giraudeau",
@@ -353,13 +353,13 @@ const profiles = [
   {
     name: "Agnieska Paskevic",
     image: "/img/apas.jpg",
-    position: "Volley-ball",
+    position: "Natation",
     location: "Mercer University",
   },
   {
     name: "Teo Puig",
     image: "/img/tpuig.jpg",
-    position: "Volley-ball",
+    position: "Natation",
     location: "Delta State University",
   },
   {
@@ -377,7 +377,7 @@ const profiles = [
   {
     name: "Vanina Loriedo",
     image: "/img/vloriedo.jpg",
-    position: "Volley-ball",
+    position: "Natation",
     location: "University of Montevallo",
   },
   {
